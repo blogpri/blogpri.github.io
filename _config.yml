@@ -217,6 +217,20 @@ exclude:
   - "*.config.js"
   - package*.json
 
+#show img/ to online
+include:
+  - img
+
+prose:
+  media: "img" #put image into img/
+  metadata:
+    _posts:
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "published"
+          value: "true"
+
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
@@ -225,3 +239,6 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+#show future post
+future: true
